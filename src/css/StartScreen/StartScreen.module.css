@@ -59,9 +59,10 @@
   font-size: 20px;
   cursor: pointer;
   border-radius: 50px;
-  background-color: #97b4e2;
+  background-color: #c5d5ee;
+  border: none;
 }
 
 .testStart:hover {
-  background-color: #989de3;
+  background-color: #97b4e2;
 }
