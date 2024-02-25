@@ -1,17 +1,17 @@
-// 첫번째 질문 구성 컴포넌트
+// 세번째 질문 구성 컴포넌트
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "../../css/AskScreen/Question1.module.css";
+import styles from "../../css/AskScreen/Question3.module.css";
 
-function Question1() {
+function Question3() {
   let navigate = useNavigate();
 
   const [selected, setSelected] = useState(null);
 
   const handleSelect = (index) => {
     setSelected(index);
-    navigate("/perfume2");
+    navigate("/perfume4");
   };
 
   const buttons = [
@@ -24,10 +24,10 @@ function Question1() {
   return (
     <div className={styles["questionScreen"]}>
       <div className={styles["progress"]}>
-        <img src="../../img/AskScreen/perfumeBottle01.png" alt="진행도" />
+        <img src="../../img/AskScreen/perfumeBottle03.png" alt="진행도" />
       </div>
       <div className={styles["question"]}>
-        <p className={styles["ask"]}>첫번째 지이이이일무우우운</p>
+        <p className={styles["ask"]}>세번째 지이이이일무우우운</p>
       </div>
       {buttons.map((button, index) => (
         <div className={styles["answer"]} key={button.id}>
@@ -45,4 +45,4 @@ function Question1() {
   );
 }
 
-export default Question1;
+export default Question3;
