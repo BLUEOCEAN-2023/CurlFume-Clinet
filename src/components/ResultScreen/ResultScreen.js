@@ -48,10 +48,28 @@ function ResultScreen() {
               className={styles["progressBar"]}
               style={{ width: `${progressPercentage}%` }}
             >
-              {/* 중앙에 텍스트를 표시할 span 요소 추가 */}
               <span
                 className={styles["progressText"]}
               >{`${progressPercentage}%`}</span>
+            </div>
+          </div>
+        </div>
+        <div className={styles["share"]}>
+          <div className={styles["sharetitle"]}>
+            <p className={styles["resulttext"]}>결과공유</p>
+          </div>
+          <div className={styles["shareimg"]}>
+            <div className={styles["instagram"]}>
+              <img
+                src="../../img/ResultScreen/instagram.png"
+                alt="인스타그램"
+              />
+            </div>
+            <div className={styles["kakao"]}>
+              <img src="../../img/ResultScreen/kakaotalk.png" alt="카카오톡" />
+            </div>
+            <div className={styles["x"]}>
+              <img src="../../img/ResultScreen/x.png" alt="x" />
             </div>
           </div>
         </div>

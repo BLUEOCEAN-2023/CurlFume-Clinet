@@ -161,3 +161,39 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+.resulttext {
+  font-size: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.share {
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
+
+.shareimg {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.instagram img,
+.kakao img,
+.x img {
+  width: 70px;
+  height: 70px;
+  background-color: lightgrey;
+  border-radius: 15px;
+  margin-right: 10px;
+}
