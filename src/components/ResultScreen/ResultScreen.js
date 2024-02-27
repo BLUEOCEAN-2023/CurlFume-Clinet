@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import styles from "../../css/ResultScreen/ResultScreen.module.css";
 
 function ResultScreen() {
+  const progressPercentage = 70;
+
   return (
     <div className={styles["resultScreen"]}>
       <div className={styles["header"]}>
@@ -37,6 +39,20 @@ function ResultScreen() {
               안녕하세요... 이것은 향수 취향에 적합한 로얄워터 향수
               설명칸입니다.. 🧴
             </p>
+          </div>
+        </div>
+        <div className={styles["importance"]}>
+          <p className={styles["proportion"]}>나와 같은 결과가 나온 비율</p>
+          <div className={styles["progressBarContainer"]}>
+            <div
+              className={styles["progressBar"]}
+              style={{ width: `${progressPercentage}%` }}
+            >
+              {/* 중앙에 텍스트를 표시할 span 요소 추가 */}
+              <span
+                className={styles["progressText"]}
+              >{`${progressPercentage}%`}</span>
+            </div>
           </div>
         </div>
       </div>
