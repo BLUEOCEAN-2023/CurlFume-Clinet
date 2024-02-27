@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "NPSfontBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "NPSfontBold";
+}
+
+.header p {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 130px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateX(-250px);
+  max-width: 540px;
+}
+
+.triangle {
+  width: 190px;
+  height: 0;
+  border-bottom: 100px solid lavender;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.trapezoid {
+  width: 305px;
+  height: 0;
+  border-bottom: 100px solid lavenderblush;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.largeTrapezoid {
+  width: 430px;
+  height: 0;
+  border-bottom: 100px solid linen;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+}
+
+.text {
+  font-size: 17px;
+}
+
+.top {
+  top: 0;
+  position: absolute;
+  top: 35%;
+  left: 55%;
+  white-space: nowrap;
+}
+
+.middle {
+  position: absolute;
+  top: 51.5%;
+  left: 55%;
+  white-space: nowrap;
+}
+
+.base {
+  position: absolute;
+  top: 70%;
+  left: 55%;
+  white-space: nowrap;
+}
