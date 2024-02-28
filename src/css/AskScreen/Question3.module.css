@@ -14,56 +14,47 @@
 }
 
 .questionScreen {
-  padding-top: 20px;
-  padding-bottom: 120px;
-  background-color: #dee7de;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 100vh;
-  width: 100%;
+  background-color: #e8e4f1;
   position: relative;
+  width: 100%;
+  height: 100vh;
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  overflow: hidden;
 }
 
-.progress img {
-  width: 110px;
-  height: 110px;
-  margin-bottom: 70px;
+.progressimg img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 60px auto 70px auto;
 }
 
-.question {
+.questionbox {
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .ask {
-  font-size: 65px;
-  margin: 0;
-  margin-bottom: 20px;
-}
-
-.answer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  font-size: 50px;
+  margin-bottom: 100px;
 }
 
 .answerbtn {
-  width: 470px;
+  width: 500px;
   height: 50px;
+  border-radius: 20px;
   font-size: 15px;
-  border-radius: 50px;
   cursor: pointer;
-  margin-bottom: 0;
+  margin-bottom: 50px;
   background-color: #d6d4d4;
   border: none;
 }
 
 .answerbtn:hover {
-  background-color: #9ab4a8;
+  background-color: #b1a6ca;
 }
 
 .selected {
-  background-color: #9ab4a8;
+  background-color: #b1a6ca;
 }
