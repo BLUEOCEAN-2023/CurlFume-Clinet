@@ -1,7 +1,6 @@
 // 결과 화면 구성 컴포넌트
 
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import styles from "../../css/ResultScreen/ResultScreen.module.css";
 
 function ResultScreen() {

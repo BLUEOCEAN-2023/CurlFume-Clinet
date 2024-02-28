@@ -1,31 +1,32 @@
-// 네번째 질문 구성 컴포넌트
+// 여섯번째 질문 구성 컴포넌트
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "../../css/AskScreen/Question4.module.css";
+import styles from "../../css/AskScreen/Question6.module.css";
 
-function Question4() {
+function Question6() {
   let navigate = useNavigate();
 
   const [selected, setSelected] = useState(null);
 
   const handleSelect = (index) => {
     setSelected(index);
-    navigate("/perfume5");
+    console.log("Selected button ID:", buttons[index].id);
+    navigate("/result");
   };
 
   const buttons = [
-    { id: 1, text: "머스크" },
-    { id: 2, text: "시트러스" },
+    { id: 1, text: "시트러스" },
+    { id: 2, text: "프루티" },
   ];
 
   return (
     <div className={styles["questionScreen"]}>
       <div className={styles["progressimg"]}>
-        <img src="../../img/AskScreen/perfumeBottle04.png" alt="진행도" />
+        <img src="../../img/AskScreen/perfumeBottle01.png" alt="진행도" />
       </div>
       <div className={styles["questionbox"]}>
-        <p className={styles["ask"]}>머스크 VS 시트러스</p>
+        <p className={styles["ask"]}>시트러스 VS 프루티</p>
         {buttons.map((button, index) => (
           <div className={styles["answer"]} key={button.id}>
             <button
@@ -43,4 +44,4 @@ function Question4() {
   );
 }
 
-export default Question4;
+export default Question6;
