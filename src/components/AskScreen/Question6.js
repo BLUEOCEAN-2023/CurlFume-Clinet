@@ -23,7 +23,7 @@ function Question6() {
   return (
     <div className={styles["questionScreen"]}>
       <div className={styles["progressimg"]}>
-        <img src="../../img/AskScreen/perfumeBottle01.png" alt="진행도" />
+        <img src="../../img/AskScreen/perfumeBottle06.png" alt="진행도" />
       </div>
       <div className={styles["questionbox"]}>
         <p className={styles["ask"]}>시트러스 VS 프루티</p>
