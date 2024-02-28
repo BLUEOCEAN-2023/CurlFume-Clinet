@@ -26,7 +26,7 @@ function Question5() {
         <img src="../../img/AskScreen/perfumeBottle05.png" alt="진행도" />
       </div>
       <div className={styles["questionbox"]}>
-        <p className={styles["ask"]}>머스크 VS 프루티</p>
+        <p className={styles["ask"]}>머스크 vs 프루티</p>
         {buttons.map((button, index) => (
           <div className={styles["answer"]} key={button.id}>
             <button

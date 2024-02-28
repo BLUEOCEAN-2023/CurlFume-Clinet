@@ -11,6 +11,7 @@ function Question2() {
 
   const handleSelect = (index) => {
     setSelected(index);
+    console.log("Selected button ID:", buttons[index].id);
     navigate("/perfume3");
   };
 
@@ -25,7 +26,7 @@ function Question2() {
         <img src="../../img/AskScreen/perfumeBottle02.png" alt="진행도" />
       </div>
       <div className={styles["questionbox"]}>
-        <p className={styles["ask"]}>플로럴 VS 시트러스</p>
+        <p className={styles["ask"]}>플로럴 vs 시트러스</p>
         {buttons.map((button, index) => (
           <div className={styles["answer"]} key={button.id}>
             <button

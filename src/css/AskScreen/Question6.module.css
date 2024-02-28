@@ -14,7 +14,7 @@
 }
 
 .questionScreen {
-  background-color: #e8e4f1;
+  background-color: white;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -38,6 +38,7 @@
 .ask {
   font-size: 50px;
   margin-bottom: 100px;
+  text-transform: none;
 }
 
 .answerbtn {
@@ -47,14 +48,14 @@
   font-size: 15px;
   cursor: pointer;
   margin-bottom: 50px;
-  background-color: #d6d4d4;
+  background-color: #c4c5c9;
   border: none;
 }
 
 .answerbtn:hover {
-  background-color: #b1a6ca;
+  background-color: #ecccca;
 }
 
 .selected {
-  background-color: #b1a6ca;
+  background-color: #ecccca;
 }
