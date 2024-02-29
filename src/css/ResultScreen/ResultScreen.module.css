@@ -125,14 +125,17 @@
   transform: translateY(-50%);
 }
 
-.footer {
+.footer .shareimg {
+  display: flex;
   justify-content: space-around;
   align-items: center;
-  text-align: center;
-  width: 1200px;
-  margin: 0 auto;
-  margin-bottom: 15px;
-  padding: 0 10px;
+}
+
+.footer .shareimg img {
+  margin-bottom: 50px;
+  width: 70px;
+  height: 70px;
+  border-radius: 15px;
 }
 
 .resulttext {
@@ -142,13 +145,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.shareimg img {
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 100px;
-  width: 70px;
-  height: 70px;
-  border-radius: 15px;
 }
