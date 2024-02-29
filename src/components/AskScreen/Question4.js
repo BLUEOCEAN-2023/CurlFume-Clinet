@@ -16,8 +16,8 @@ function Question4() {
   };
 
   const buttons = [
-    { id: 1, text: "머스크" },
-    { id: 2, text: "시트러스" },
+    { id: "Musk", text: "머스크" },
+    { id: "Citrus", text: "시트러스" },
   ];
 
   return (
