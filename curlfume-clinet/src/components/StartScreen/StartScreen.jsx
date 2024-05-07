@@ -2,12 +2,20 @@
 
 import React from "react";
 import "../../css/StartScreen/StartScreen.scss";
+import StartScreenImg from "../../IMG/StartScreenImg.png";
 
 const StartScreen = () => {
   return (
     <>
-      <p>테스트</p>
-      <p>테스트 글자</p>
+      <div className="bgImg">
+        <img src={StartScreenImg} />
+        <div className="bgImgText">
+          <p>Curl Fume</p>
+        </div>
+        <div className="bgImgBtn">
+          <button>시작하기</button>
+        </div>
+      </div>
     </>
   );
 };

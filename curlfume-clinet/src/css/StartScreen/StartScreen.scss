@@ -1,11 +1,68 @@
 @font-face {
-  font-family: "KCC-Hanbit";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/KCC-Hanbit.woff2")
+  font-family: "WavvePADO";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/WavvePADO-Regular.woff2")
     format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 * {
-  font-family: KCC-Hanbit;
+  font-family: WavvePADO;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.bgImg {
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  position: relative;
+  flex-direction: column;
+
+  img {
+    width: 30em;
+    height: 30em;
+
+    margin: auto;
+  }
+
+  .bgImgText {
+    text-align: center;
+    color: #3dbbff;
+    font-size: 3em;
+
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-44%, -80%);
+  }
+
+  .bgImgBtn {
+    text-align: center;
+    border: none;
+
+    button {
+      border: none;
+      cursor: pointer;
+
+      background-color: #fff;
+      color: #3dbbff;
+
+      height: 5em;
+      font-size: 2em;
+    }
+
+    button:hover {
+      color: #0056b2;
+    }
+  }
 }
