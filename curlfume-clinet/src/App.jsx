@@ -1,9 +1,15 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import StartScreen from "./components/StartScreen/StartScreen";
 
 function App() {
   return (
     <>
-      <StartScreen />
+      <Router>
+        <Routes>
+          <Route path="/" element={<StartScreen />} />
+        </Routes>
+      </Router>
     </>
   );
 }
