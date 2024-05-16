@@ -9,7 +9,7 @@ const StartScreen = () => {
   let navigate = useNavigate();
 
   const toNextScreen = () => {
-    navigate("/perfume1");
+    navigate("/perfume");
   };
 
   return (
