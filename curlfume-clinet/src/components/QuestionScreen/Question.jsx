@@ -1,23 +1,71 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Questions from "./QuestionList.json";
 // import "../../css/QuestionScreen/QuestionScreen.scss";
 
 const Question = () => {
+  const [currentId, setCurrentId] = useState(1); // 화면 넘어감
+  const [perfume, setPerfume] = useState([]);
+  const TOTAL_PAGES = 6;
+  let baseResult = "";
+
+  const handleButtonClick = (event) => {
+    const { type } = event.currentTarget.dataset;
+    setPerfume([...perfume, type]); // 선택한 버튼의 type 값을 perfume 배열에 추가
+    setCurrentId(currentId + 1); // 화면 넘어가기
+    // console.log(type); // 선택한 버튼의 type 값을 콘솔에 출력
+
+    if (currentId === TOTAL_PAGES) {
+      CheckFirst();
+    }
+  };
+
+  const CheckFirst = () => {
+    let map = {};
+    let middleResult = [];
+    for (let i = 0; i < perfume.length; i++) {
+      if (perfume[i] in map) {
+        map[perfume[i]] += 1;
+      } else {
+        map[perfume[i]] = 1;
+      }
+    }
+
+    let maxCount = Math.max(...Object.values(map));
+    for (let count in map) {
+      if (map[count] === maxCount) {
+        middleResult.push(count);
+      }
+    }
+
+    baseResult = middleResult[0];
+    console.log(baseResult);
+    console.log("가장 많이 선택된 향:", middleResult[0]);
+  };
+
   return (
     <>
       <div>
-        {Questions.map((list) => (
-          <div className="question_container" key={list.id}>
-            <div className="title">{list.question}</div>
-            <div className="answer_container">
-              {list.answers.map((answer, index) => (
-                <div className="answer_content" key={index}>
-                  <button>{answer.content}</button>
+        {Questions.map(
+          (item) =>
+            item.id === currentId && (
+              <div className="question_container" key={item.id}>
+                <div className="question_no">{item.question_no}</div>
+                <div className="title">{item.question}</div>
+                <div className="answer_container">
+                  {item.answers.map((answer, index) => (
+                    <div className="answer_content" key={index}>
+                      <button
+                        data-type={answer.type}
+                        onClick={handleButtonClick}
+                      >
+                        {answer.content}
+                      </button>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
-        ))}
+              </div>
+            )
+        )}
       </div>
     </>
   );
