@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Questions from "./QuestionList.json";
+import { useNavigate } from "react-router-dom";
 // import "../../css/QuestionScreen/QuestionScreen.scss";
 
 const Question = () => {
+  const navigate = useNavigate();
   const [currentId, setCurrentId] = useState(1); // 화면 넘어감
   const [perfume, setPerfume] = useState([]);
   const TOTAL_PAGES = 6;
@@ -16,6 +18,7 @@ const Question = () => {
 
     if (currentId === TOTAL_PAGES) {
       CheckFirst();
+      navigate(`/result/${baseResult}`); // 변수가 설정되어야 결과 페이지로 이동됨
     }
   };
 
