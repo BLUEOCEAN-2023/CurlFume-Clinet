@@ -36,14 +36,14 @@
 
   .bgImgText {
     text-align: center;
-    color: #3dbbff;
-    font-size: 3em;
+    color: #fff;
+    font-size: 4em;
 
     margin: auto;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-44%, -80%);
+    transform: translate(-48%, -85%);
   }
 
   .bgImgBtn {
@@ -55,14 +55,14 @@
       cursor: pointer;
 
       background-color: #fff;
-      color: #3dbbff;
+      color: #000;
 
       height: 5em;
       font-size: 2em;
     }
 
     button:hover {
-      color: #0056b2;
+      color: #979797;
     }
   }
 }
