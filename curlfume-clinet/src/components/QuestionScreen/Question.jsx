@@ -18,7 +18,7 @@ const Question = () => {
 
     if (currentId === TOTAL_PAGES) {
       CheckFirst();
-      navigate(`/result/${baseResult}`); // 변수가 설정되어야 결과 페이지로 이동됨
+      navigate(`/perfume/${baseResult}`); // 변수가 설정되어야 결과 페이지로 이동됨
     }
   };
 
