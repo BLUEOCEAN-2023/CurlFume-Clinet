@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "path": "F",
+    "question_no": "Q7",
+    "question": "드디어 집이다! 무엇을 할까?",
+    "answers": [
+      {
+        "type": "modern",
+        "content": "착착착! 가방과 교복을 정리한다"
+      },
+      {
+        "type": "youth",
+        "content": "정리는 나중! 일단 잠시 쉰다"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "path": "M",
+    "question_no": "Q7",
+    "question": "드디어 집이다! 무엇을 할까?",
+    "answers": [
+      {
+        "type": "mysterious",
+        "content": "나무가 많은 공원으로 산책하러 나가자!"
+      },
+      {
+        "type": "warm",
+        "content": "포근한 침대로 바로 다이브!"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "path": "C",
+    "question_no": "Q7",
+    "question": "드디어 집이다! 무엇을 할까?",
+    "answers": [
+      {
+        "type": "cool",
+        "content": "휴. 힘들었던 나를 위해 시원한 물을 원샷!"
+      },
+      {
+        "type": "clean",
+        "content": "침대로 다이브하기 전 일단 샤워부터!"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "path": "R",
+    "question_no": "Q7",
+    "question": "드디어 집이다! 무엇을 할까?",
+    "answers": [
+      {
+        "type": "fancy",
+        "content": "학교와는 다른 나! 열심히 꾸미고 친구와 놀러가자!"
+      },
+      {
+        "type": "grave",
+        "content": "나만의 시간인 취미생활 즐기기!"
+      }
+    ]
+  }
+]
