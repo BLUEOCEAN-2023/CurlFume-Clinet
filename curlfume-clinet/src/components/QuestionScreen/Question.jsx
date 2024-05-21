@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Questions from "./QuestionList.json";
 import { useNavigate } from "react-router-dom";
-// import "../../css/QuestionScreen/QuestionScreen.scss";
+import "../../css/QuestionScreen/QuestionScreen.scss";
 
 const Question = () => {
   const navigate = useNavigate();
@@ -52,8 +52,10 @@ const Question = () => {
           (item) =>
             item.id === currentId && (
               <div className="question_container" key={item.id}>
-                <div className="question_no">{item.question_no}</div>
-                <div className="title">{item.question}</div>
+                <div className="question_title_container">
+                  <div className="question_no">{item.question_no}</div>
+                  <div className="question_title">{item.question}</div>
+                </div>
                 <div className="answer_container">
                   {item.answers.map((answer, index) => (
                     <div className="answer_content" key={index}>
