@@ -1,26 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Questions from "./QuestionList.json";
 import { useNavigate } from "react-router-dom";
 import "../../css/QuestionScreen/QuestionScreen.scss";
 
 const Question = () => {
   const navigate = useNavigate();
-  const [currentId, setCurrentId] = useState(1); // 화면 넘어감
+  const [currentId, setCurrentId] = useState(1);
   const [perfume, setPerfume] = useState([]);
+  const [baseResult, setBaseResult] = useState("");
   const TOTAL_PAGES = 6;
-  let baseResult = "";
 
   const handleButtonClick = (event) => {
     const { type } = event.currentTarget.dataset;
-    setPerfume([...perfume, type]); // 선택한 버튼의 type 값을 perfume 배열에 추가
-    setCurrentId(currentId + 1); // 화면 넘어가기
-    // console.log(type); // 선택한 버튼의 type 값을 콘솔에 출력
-
-    if (currentId === TOTAL_PAGES) {
-      CheckFirst();
-      navigate(`/perfume/${baseResult}`); // 변수가 설정되어야 결과 페이지로 이동됨
-    }
+    setPerfume([...perfume, type]);
+    setCurrentId(currentId + 1);
   };
+
+  useEffect(() => {
+    if (currentId > TOTAL_PAGES) {
+      CheckFirst();
+    }
+  }, [currentId]);
 
   const CheckFirst = () => {
     let map = {};
@@ -32,47 +32,39 @@ const Question = () => {
         map[perfume[i]] = 1;
       }
     }
-
     let maxCount = Math.max(...Object.values(map));
     for (let count in map) {
       if (map[count] === maxCount) {
         middleResult.push(count);
       }
     }
-
-    baseResult = middleResult[0];
-    console.log(baseResult);
-    console.log("가장 많이 선택된 향:", middleResult[0]);
+    setBaseResult(middleResult[0]);
+    navigate(`/perfume/${middleResult[0]}`);
   };
 
   return (
-    <>
-      <div>
-        {Questions.map(
-          (item) =>
-            item.id === currentId && (
-              <div className="question_container" key={item.id}>
-                <div className="question_title_container">
-                  <div className="question_no">{item.question_no}</div>
-                  <div className="question_title">{item.question}</div>
-                </div>
-                <div className="answer_container">
-                  {item.answers.map((answer, index) => (
-                    <div className="answer_content" key={index}>
-                      <button
-                        data-type={answer.type}
-                        onClick={handleButtonClick}
-                      >
-                        {answer.content}
-                      </button>
-                    </div>
-                  ))}
-                </div>
+    <div>
+      {Questions.map(
+        (item) =>
+          item.id === currentId && (
+            <div className="question_container" key={item.id}>
+              <div className="question_title_container">
+                <div className="question_no">{item.question_no}</div>
+                <div className="question_title">{item.question}</div>
               </div>
-            )
-        )}
-      </div>
-    </>
+              <div className="answer_container">
+                {item.answers.map((answer, index) => (
+                  <div className="answer_content" key={index}>
+                    <button data-type={answer.type} onClick={handleButtonClick}>
+                      {answer.content}
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )
+      )}
+    </div>
   );
 };
 
