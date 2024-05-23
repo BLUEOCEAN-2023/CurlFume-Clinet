@@ -30,7 +30,6 @@ const ResultScreen = () => {
         <img src={headerImg} alt="Header" className="header-img" />
       </header>
       <main>
-        {/* <h1>{data.path}</h1> */}
         <div className="keywords">
           {keywords.map((keyword, index) => (
             <h1 key={index} className="keyword">
@@ -47,7 +46,7 @@ const ResultScreen = () => {
           {perfumes.map((perfume, index) => (
             <div key={index} className="perfume">
               <img src={perfume.image} alt={`${perfume.title} Image`} />
-              <h2>{perfume.title}</h2>
+              <h1>{perfume.title}</h1>
               <p>{perfume.detail}</p>
             </div>
           ))}

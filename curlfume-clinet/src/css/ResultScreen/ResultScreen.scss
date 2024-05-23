@@ -1,17 +1,78 @@
 .result-screen {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  .header-img {
+  header,
+  footer {
     width: 100%;
-    height: 8em;
-    display: block;
-    margin: 0 auto;
   }
 
+  .header-img,
   .footer-img {
+    display: block;
     width: 100%;
     height: 8em;
-    display: block;
-    margin: 0 auto;
+  }
+
+  main {
+    width: 70%; // 메인 컨텐츠 너비 조정
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .keywords {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      margin: 50px 0; // 헤더 이미지와의 간격 조정
+
+      .keyword {
+        // 키워드 스타일링
+      }
+    }
+
+    .main-picture {
+      width: 40%; // 이미지 크기 조정
+      margin-top: 40px;
+      margin-bottom: 70px;
+      // margin: 70px 0; // 이미지와 키워드 간, 향수 간의 간격 조정
+    }
+
+    .perfumes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 100%;
+
+      .perfume {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 35%; // 향수 항목의 너비 조정
+        margin: 30px; // 향수 항목 간의 간격 조정
+
+        img {
+          width: 80%; // 향수 이미지 크기 조정
+          margin-bottom: 30px; // 이미지와 제목 간의 간격 조정
+        }
+
+        h1,
+        p {
+          word-break: keep-all;
+          text-align: center;
+        }
+
+        p {
+          width: 80%;
+          font-size: 1.19em;
+        }
+
+        // 너비가 768px 미만일 경우, 한 줄에 하나의 향수만 표시
+        @media (max-width: 768px) {
+          width: 90%;
+        }
+      }
+    }
   }
 }
