@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, useNavigate, Outlet } from "react-router-dom";
 import MiddleQuestionData from "./MiddleQuestionList.json";
 import "../../css/QuestionScreen/QuestionScreen.scss";
@@ -18,6 +18,16 @@ const MiddleQuestion = () => {
   const handleButtonClick = (type) => {
     navigate(`/perfume/${baseResult}/${type}`);
   };
+
+  useEffect(() => {
+    // 컴포넌트가 마운트될 때 클래스 추가
+    document.body.classList.add("body-page");
+
+    // 컴포넌트가 언마운트될 때 클래스 제거
+    return () => {
+      document.body.classList.remove("body-page");
+    };
+  }, []);
 
   return (
     <div>

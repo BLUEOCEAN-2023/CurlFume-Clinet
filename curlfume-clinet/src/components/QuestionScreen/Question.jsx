@@ -42,6 +42,16 @@ const Question = () => {
     navigate(`/perfume/${middleResult[0]}`);
   };
 
+  useEffect(() => {
+    // 컴포넌트가 마운트될 때 클래스 추가
+    document.body.classList.add("body-page");
+
+    // 컴포넌트가 언마운트될 때 클래스 제거
+    return () => {
+      document.body.classList.remove("body-page");
+    };
+  }, []);
+
   return (
     <div>
       {Questions.map(
