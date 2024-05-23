@@ -3,15 +3,15 @@
     "id": 1,
     "path": "cool",
     "question_no": "Q8",
-    "question": "시트러스 바질 VS 프로스트 마운틴",
+    "question": "이제 취미생활을 즐겨볼까?",
     "answers": [
       {
         "type": "basil",
-        "content": "시트러스 바질"
+        "content": "신나는 노래를 들어보자!"
       },
       {
         "type": "frost",
-        "content": "프로스트 마운틴"
+        "content": "아! 맞다, ㅣㄱ물에 물을 줘야지!"
       }
     ]
   },
@@ -19,15 +19,15 @@
     "id": 2,
     "path": "clean",
     "question_no": "Q8",
-    "question": "그레이프프룻 블래스트 VS 얼그레이 스파클",
+    "question": "바로 침대로 다이브! 이제 뭘하지?",
     "answers": [
       {
         "type": "grapefruit",
-        "content": "그레이프프룻 블래스트"
+        "content": "잠자기 전에 폰하는건 국룰이지!"
       },
       {
         "type": "earlgrey",
-        "content": "얼그레이 스파클"
+        "content": "뭘하긴 뭘해! 내일을 위해 모두 굿나잇!"
       }
     ]
   },
@@ -35,15 +35,15 @@
     "id": 3,
     "path": "fancy",
     "question_no": "Q8",
-    "question": "제스티 페어 VS 샤이니 골드",
+    "question": "꾸미고 놀러가자! 흠.. 어떤 메이크업을 하고 나가지?",
     "answers": [
       {
         "type": "pear",
-        "content": "제스티 페어"
+        "content": "산뜻하고 청순한 메이크업으로 출발!"
       },
       {
         "type": "gold",
-        "content": "샤이니 골드"
+        "content": "외출에는 화려한 글리터! 완벽해!"
       }
     ]
   },
@@ -51,15 +51,15 @@
     "id": 4,
     "path": "grave",
     "question_no": "Q8",
-    "question": "블랙 커런트 VS 넥타린 플로레스",
+    "question": "오늘은 어떤 취미를 즐겨볼까?",
     "answers": [
       {
         "type": "current",
-        "content": "블랙 커런트"
+        "content": "역시 자기개발은 필요해. 오늘은 책을 읽어보자"
       },
       {
         "type": "flores",
-        "content": "넥타린 플로레스"
+        "content": "게임만큼 완벽한 취미는 없지! 바로 가보자!"
       }
     ]
   },
@@ -67,15 +67,15 @@
     "id": 5,
     "path": "modern",
     "question_no": "Q8",
-    "question": "데이지 VS 피그 블리스",
+    "question": "가방과 옷을 다 정리했어! 이제 뭐하지?",
     "answers": [
       {
         "type": "daisy",
-        "content": "데이지"
+        "content": "내일을 위해 미리 학교갈 준비를 해두자!"
       },
       {
         "type": "bliss",
-        "content": "피그 블리스"
+        "content": "정리도 끝났으니 이제 누워서 쉬자..."
       }
     ]
   },
@@ -83,11 +83,11 @@
     "id": 6,
     "path": "youth",
     "question_no": "Q8",
-    "question": "선데이 모닝 VS 핑크 워터",
+    "question": "잠깐 쉬고 난 후.. 이제 뭐 하지?",
     "answers": [
       {
         "type": "sunday",
-        "content": "선데이 모닝"
+        "content": "포근한 이불에 다이브! 눈이 스르륵 감긴다."
       },
       {
         "type": "pink",
