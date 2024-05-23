@@ -1,17 +1,22 @@
-// Popup.jsx
+// Popup.js
 import React from "react";
-import "../../css/ResultScreen/Popup.scss";
+// import "./Popup.scss"; // 팝업 스타일링을 위한 CSS 파일
 
-const Popup = ({ isOpen, onClose, children }) => {
-  if (!isOpen) return null;
+const Popup = ({ data, onClose }) => {
+  if (!data) return null;
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>
-          X
+    <div className="popup-overlay">
+      <div className="popup-content">
+        <button className="close-button" onClick={onClose}>
+          닫기
         </button>
-        {children}
+        {data.map((item, index) => (
+          <div key={index} className="popup-item">
+            <img src={item.image} alt={`Popup Item ${index + 1}`} />
+            <p>{item.content}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
