@@ -1,10 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Modal from "react-modal";
 import StartScreen from "./components/StartScreen/StartScreen";
 import Question from "./components/QuestionScreen/Question";
 import MiddleQuestion from "./components/QuestionScreen/MiddleQuestion";
 import LastQuestion from "./components/QuestionScreen/LastQuestion";
 import Result from "./components/ResultScreen/ResultScreen";
 import NotFoundPage from "./components/NotFoundPage";
+
+Modal.setAppElement("#root");
 
 function App() {
   return (
