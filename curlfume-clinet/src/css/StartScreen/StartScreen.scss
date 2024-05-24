@@ -28,22 +28,10 @@
   flex-direction: column;
 
   img {
-    width: 30em;
-    height: 30em;
+    width: 27em;
+    height: 27em;
 
     margin: auto;
-  }
-
-  .bgImgText {
-    text-align: center;
-    color: #fff;
-    font-size: 4em;
-
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-48%, -85%);
   }
 
   .bgImgBtn {

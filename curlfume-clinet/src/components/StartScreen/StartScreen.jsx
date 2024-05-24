@@ -16,9 +16,6 @@ const StartScreen = () => {
     <>
       <div className="bgImg">
         <img src={StartScreenImg} />
-        <div className="bgImgText">
-          <p>Curl Fume</p>
-        </div>
         <div className="bgImgBtn">
           <button onClick={toNextScreen}>시작하기</button>
         </div>
