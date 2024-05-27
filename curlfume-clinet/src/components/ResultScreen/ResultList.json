@@ -4,13 +4,13 @@
     "path": "basil",
     "keyword": [
       {
-        "content": "키워드 1"
+        "content": "독특한"
       },
       {
-        "content": "키워드 2"
+        "content": "현대적인"
       },
       {
-        "content": "키워드 3"
+        "content": "클래식한"
       }
     ],
     "picture": "/IMG/perfume/basil/basilPicture.jpg",
@@ -32,13 +32,13 @@
     "path": "frost",
     "keyword": [
       {
-        "content": "키워드 1"
+        "content": "신선한"
       },
       {
-        "content": "키워드 2"
+        "content": "현대적인"
       },
       {
-        "content": "키워드 3"
+        "content": "웅장한"
       }
     ],
     "picture": "/IMG/perfume/frost/frostPicture.jpg",
@@ -60,13 +60,13 @@
     "path": "grapefruit",
     "keyword": [
       {
-        "content": "키워드 1"
+        "content": "톡쏘는"
       },
       {
-        "content": "키워드 2"
+        "content": "중독성 있는"
       },
       {
-        "content": "키워드 3"
+        "content": "상큼달달한"
       }
     ],
     "picture": "/IMG/perfume/grapefruit/grapefruitPicture.jpg",
@@ -88,13 +88,13 @@
     "path": "earlgrey",
     "keyword": [
       {
-        "content": "키워드 1"
+        "content": "그윽한"
       },
       {
-        "content": "키워드 2"
+        "content": "신선한"
       },
       {
-        "content": "키워드 3"
+        "content": "부드러운"
       }
     ],
     "picture": "/IMG/perfume/earlgrey/earlgreyPicture.jpg",
@@ -116,13 +116,13 @@
     "path": "pear",
     "keyword": [
       {
-        "content": "키워드 1"
+        "content": "신선한"
       },
       {
-        "content": "키워드 2"
+        "content": "순수한"
       },
       {
-        "content": "키워드 3"
+        "content": "산뜻한"
       }
     ],
     "picture": "/IMG/perfume/pear/pearPicture.jpg",
@@ -144,13 +144,13 @@
     "path": "gold",
     "keyword": [
       {
-        "content": "키워드 1"
+        "content": "관능적인"
       },
       {
-        "content": "키워드 2"
+        "content": "품격있는"
       },
       {
-        "content": "키워드 3"
+        "content": "부드러운"
       }
     ],
     "picture": "/IMG/perfume/gold/goldPicture.jpg",
@@ -172,13 +172,13 @@
     "path": "current",
     "keyword": [
       {
-        "content": "키워드 1"
+        "content": "톡쏘는"
       },
       {
-        "content": "키워드 2"
+        "content": "신선한"
       },
       {
-        "content": "키워드 3"
+        "content": "매력적인"
       }
     ],
     "picture": "/IMG/perfume/current/currentPicture.jpg",
@@ -200,13 +200,13 @@
     "path": "flores",
     "keyword": [
       {
-        "content": "키워드 1"
+        "content": "유쾌한"
       },
       {
-        "content": "키워드 2"
+        "content": "활발한"
       },
       {
-        "content": "키워드 3"
+        "content": "달콤한"
       }
     ],
     "picture": "/IMG/perfume/flores/floresPicture.jpg",
@@ -228,13 +228,13 @@
     "path": "daisy",
     "keyword": [
       {
-        "content": "키워드 1"
+        "content": "자연스러운"
       },
       {
-        "content": "키워드 2"
+        "content": "빈티지적인"
       },
       {
-        "content": "키워드 3"
+        "content": "모던한"
       }
     ],
     "picture": "/IMG/perfume/daisy/daisyPicture.jpg",
@@ -256,13 +256,13 @@
     "path": "bliss",
     "keyword": [
       {
-        "content": "키워드 1"
+        "content": "담백한"
       },
       {
-        "content": "키워드 2"
+        "content": "상쾌한"
       },
       {
-        "content": "키워드 3"
+        "content": "우디한"
       }
     ],
     "picture": "/IMG/perfume/bliss/blissPicture.jpg",
@@ -284,13 +284,13 @@
     "path": "sunday",
     "keyword": [
       {
-        "content": "키워드 1"
+        "content": "부드러운"
       },
       {
-        "content": "키워드 2"
+        "content": "산뜻한"
       },
       {
-        "content": "키워드 3"
+        "content": "발랄한"
       }
     ],
     "picture": "/IMG/perfume/sunday/sundayPicture.jpg",
@@ -312,13 +312,13 @@
     "path": "pink",
     "keyword": [
       {
-        "content": "키워드 1"
+        "content": "사랑스러운"
       },
       {
-        "content": "키워드 2"
+        "content": "여성스러운"
       },
       {
-        "content": "키워드 3"
+        "content": "관능적인"
       }
     ],
     "picture": "/IMG/perfume/pink/pinkPicture.jpg",
@@ -340,13 +340,13 @@
     "path": "mystic",
     "keyword": [
       {
-        "content": "키워드 1"
+        "content": "신비로운"
       },
       {
-        "content": "키워드 2"
+        "content": "우아한"
       },
       {
-        "content": "키워드 3"
+        "content": "품격있는"
       }
     ],
     "picture": "/IMG/perfume/mystic/mysticPicture.jpg",
@@ -368,13 +368,13 @@
     "path": "emeraid",
     "keyword": [
       {
-        "content": "키워드 1"
+        "content": "신선한"
       },
       {
-        "content": "키워드 2"
+        "content": "거친"
       },
       {
-        "content": "키워드 3"
+        "content": "균형있는"
       }
     ],
     "picture": "/IMG/perfume/emeraid/emeraidPicture.jpg",
@@ -396,13 +396,13 @@
     "path": "festival",
     "keyword": [
       {
-        "content": "키워드 1"
+        "content": "따뜻한"
       },
       {
-        "content": "키워드 2"
+        "content": "향기로운"
       },
       {
-        "content": "키워드 3"
+        "content": "밸런스있는"
       }
     ],
     "picture": "/IMG/perfume/festival/festivalPicture.jpg",
@@ -424,13 +424,13 @@
     "path": "osmanthus",
     "keyword": [
       {
-        "content": "키워드 1"
+        "content": "상큼달달한"
       },
       {
-        "content": "키워드 2"
+        "content": "햇빛가득한"
       },
       {
-        "content": "키워드 3"
+        "content": "따뜻한"
       }
     ],
     "picture": "/IMG/perfume/osmanthus/osmanthusPicture.jpg",
