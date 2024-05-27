@@ -25,13 +25,13 @@
       display: flex;
       justify-content: space-around;
       width: 100%;
-      margin: 50px 0; // 헤더 이미지와의 간격 조정
+      margin: 5em 0; // 헤더 이미지와의 간격 조정
     }
 
     .main-picture {
       width: 60%;
-      margin-top: 40px;
-      margin-bottom: 70px;
+      margin-top: 3.5em;
+      margin-bottom: 7em;
     }
 
     .perfumes {
@@ -45,17 +45,21 @@
         flex-direction: column;
         align-items: center;
         width: 35%; // 향수 항목의 너비 조정
-        margin: 30px; // 향수 항목 간의 간격 조정
+        margin: 3em; // 향수 항목 간의 간격 조정
 
         img {
           width: 80%; // 향수 이미지 크기 조정
-          margin-bottom: 30px; // 이미지와 제목 간의 간격 조정
+          margin-bottom: 3em; // 이미지와 제목 간의 간격 조정
         }
 
         h1,
         p {
           word-break: keep-all;
           text-align: center;
+        }
+
+        h1 {
+          font-size: 2.5em;
         }
 
         p {
@@ -81,21 +85,11 @@
   margin-right: -50%;
   transform: translate(-50%, -50%);
   background: white;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 2.3em;
+  border-radius: 1em;
   max-width: 500px; /* 모달의 최대 너비 설정 */
   width: 90%; /* 화면 크기에 따라 조정 가능 */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75); /* 오버레이 배경 색상 */
-  z-index: 1000; /* 다른 요소보다 위에 표시되도록 설정 */
 }
 
 .popup-container {
@@ -114,11 +108,11 @@
 }
 
 .popup-item {
-  margin: 10px 0;
+  margin: 1em 0;
 }
 
 .popup-item-image {
-  max-width: 100px;
+  max-width: 6.5em;
   height: auto;
 }
 
@@ -132,10 +126,9 @@
 
 // 버튼 이미지 스타일
 .popup-button-image {
-  margin-bottom: 10px; // 이미지와 텍스트 사이의 간격
+  margin-bottom: 0.875em; // 이미지와 텍스트 사이의 간격
 }
 
-/* ResultScreen.scss에 추가 */
 .body-no-scroll {
   overflow: hidden;
 }
@@ -160,24 +153,22 @@
   cursor: pointer;
 }
 
-/* .result-screen 스타일 정의 아래에 추가 */
 .result-screen main {
   .button-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px; /* 버튼 간의 간격 조정 */
+    gap: 1.5em; /* 버튼 간의 간격 조정 */
     width: 100%;
-    margin-top: 20px;
+    margin-top: 2em;
 
     button {
       flex: 1 1 auto; /* 버튼의 크기를 자동으로 조정 */
-      padding: 10px 20px;
+      padding: 0.5em 1.5em;
       font-size: 1.2em;
-      // background-color: #999;
       color: black;
       border: none;
-      border-radius: 5px;
+      border-radius: 0.5em;
       cursor: pointer;
       transition: background-color 0.3s;
 
