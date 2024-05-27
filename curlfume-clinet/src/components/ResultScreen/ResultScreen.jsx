@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Modal from "react-modal";
 import "../../css/ResultScreen/ResultScreen.scss";
 import PopupData from "./PopupDataList.json";
 import ResultList from "./ResultList.json";
 import headerImg from "../../IMG/ResultScreen/header.jpg";
+import homeIcon from "../../IMG/ResultScreen/homeIcon.png";
 
 const ResultScreen = () => {
   const { result } = useParams();
   const data = ResultList.find((item) => item.path === result);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedPopup, setSelectedPopup] = useState(null);
+  const movePage = useNavigate();
 
   if (!data) {
     return <div>데이터를 찾을 수 없습니다.</div>;
@@ -41,6 +43,10 @@ const ResultScreen = () => {
       document.body.classList.remove("body-no-scroll");
     };
   }, []);
+
+  const goToHome = () => {
+    movePage("/");
+  };
 
   return (
     <div className="result-screen">
@@ -117,6 +123,9 @@ const ResultScreen = () => {
       </main>
       <footer>
         <img src={headerImg} alt="Footer" className="footer-img" />
+        <button onClick={goToHome} className="home-button">
+          <img src={homeIcon} alt="Home" className="home-icon" />
+        </button>
       </footer>
     </div>
   );
