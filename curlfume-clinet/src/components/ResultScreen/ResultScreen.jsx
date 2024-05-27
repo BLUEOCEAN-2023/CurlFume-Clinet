@@ -4,8 +4,8 @@ import Modal from "react-modal";
 import "../../css/ResultScreen/ResultScreen.scss";
 import PopupData from "./PopupDataList.json";
 import ResultList from "./ResultList.json";
-import headerImg from "../../IMG/ResultScreen/header.png";
-import footerImg from "../../IMG/ResultScreen/footer.png";
+import headerImg from "../../IMG/ResultScreen/header.jpg";
+// import footerImg from "../../IMG/ResultScreen/footer.png";
 
 const ResultScreen = () => {
   const { result } = useParams();
@@ -83,7 +83,6 @@ const ResultScreen = () => {
                 className="popup-button-image"
               />
               <span className="popup-button-text">{popup.title}</span>{" "}
-              {/* 텍스트를 span 태그로 감싸고 클래스 추가 */}
             </button>
           ))}
         </div>
@@ -118,7 +117,7 @@ const ResultScreen = () => {
         </Modal>
       </main>
       <footer>
-        <img src={footerImg} alt="Footer" className="footer-img" />
+        <img src={headerImg} alt="Footer" className="footer-img" />
       </footer>
     </div>
   );
