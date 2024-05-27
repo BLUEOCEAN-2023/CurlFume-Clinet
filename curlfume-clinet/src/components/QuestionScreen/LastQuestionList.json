@@ -11,7 +11,7 @@
       },
       {
         "type": "frost",
-        "content": "아! 맞다, ㅣㄱ물에 물을 줘야지!"
+        "content": "아! 맞다, 식물에 물을 줘야지!"
       }
     ]
   },
@@ -91,7 +91,7 @@
       },
       {
         "type": "pink",
-        "content": "핑크 워터"
+        "content": "잠자기 전에 새로산 디퓨저를 사용해보자!"
       }
     ]
   },
@@ -99,15 +99,15 @@
     "id": 7,
     "path": "mysterious",
     "question_no": "Q8",
-    "question": "미스틱 우드 VS 에메랄드 우드",
+    "question": "앞에 벤치가 보인다 어디에 앉아서 쉬어볼까?",
     "answers": [
       {
         "type": "mystic",
-        "content": "미스틱 우드"
+        "content": "알록달록 꽃이 잔뜩 핀 벤치에 앉아서 쉬자"
       },
       {
         "type": "emeraid",
-        "content": "에메랄드 우드"
+        "content": "시원한 나무들이 살랑이는 벤치에 앉아서 쉬자"
       }
     ]
   },
@@ -115,15 +115,15 @@
     "id": 8,
     "path": "warm",
     "question_no": "Q8",
-    "question": "아프리카 페스티벌 VS 오스만투스",
+    "question": "이불에서 좋은 향기가 난다?",
     "answers": [
       {
         "type": "festival",
-        "content": "아프리카 페스티벌"
+        "content": "아! 우리집 섬유유연제 향기였구나!"
       },
       {
         "type": "osmanthus",
-        "content": "오스만투스"
+        "content": "햇빛에 말려 포근한 향기였다."
       }
     ]
   }
