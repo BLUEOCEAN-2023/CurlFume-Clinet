@@ -76,6 +76,40 @@
   }
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5em; /* 버튼 간의 간격 조정 */
+  width: 100%;
+  margin-top: 2em;
+
+  .popup-button-image {
+    margin-bottom: 0.875em; // 이미지와 텍스트 사이의 간격
+  }
+
+  .popup-button {
+    display: flex;
+    flex-direction: column; // 자식 요소를 수직으로 정렬
+    align-items: center; // 가운데 정렬
+    justify-content: center; // 내용을 중앙에 위치
+    text-align: center; // 텍스트 중앙 정렬
+    flex: 1 1 auto; /* 버튼의 크기를 자동으로 조정 */
+    padding: 0.5em 1.5em;
+
+    font-size: 1.2em;
+    color: black;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #777;
+    }
+  }
+}
+
 .popup-modal {
   position: absolute;
   top: 50%;
@@ -92,47 +126,6 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.popup-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.popup-content {
-  text-align: center;
-}
-
-.popup-image {
-  max-width: 100%; /* 이미지가 모달 크기에 맞게 조정되도록 설정 */
-  height: auto;
-}
-
-.popup-item {
-  margin: 1em 0;
-}
-
-.popup-item-image {
-  max-width: 6.5em;
-  height: auto;
-}
-
-.popup-button {
-  display: flex;
-  flex-direction: column; // 자식 요소를 수직으로 정렬
-  align-items: center; // 가운데 정렬
-  justify-content: center; // 내용을 중앙에 위치
-  text-align: center; // 텍스트 중앙 정렬
-}
-
-// 버튼 이미지 스타일
-.popup-button-image {
-  margin-bottom: 0.875em; // 이미지와 텍스트 사이의 간격
-}
-
-.body-no-scroll {
-  overflow: hidden;
-}
-
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -143,46 +136,35 @@
   backdrop-filter: blur(5px); /* 배경 블러 처리 */
 }
 
-.close-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.body-no-scroll {
+  overflow: hidden;
 }
 
-.result-screen main {
-  .button-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.5em; /* 버튼 간의 간격 조정 */
-    width: 100%;
-    margin-top: 2em;
+.popup-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    button {
-      flex: 1 1 auto; /* 버튼의 크기를 자동으로 조정 */
-      padding: 0.5em 1.5em;
-      font-size: 1.2em;
-      color: black;
-      border: none;
-      border-radius: 0.5em;
-      cursor: pointer;
-      transition: background-color 0.3s;
+  .popup-content {
+    text-align: center;
 
-      &:hover {
-        background-color: #777;
+    .popup-item {
+      margin: 1em 0;
+
+      .popup-item-image {
+        max-width: 6.5em;
+        height: auto;
       }
     }
   }
-}
 
-.popup-button {
-  display: flex;
-  flex-direction: column; // 자식 요소를 수직으로 정렬
-  align-items: center; // 가운데 정렬
-  justify-content: center; // 내용을 중앙에 위치
-  text-align: center; // 텍스트 중앙 정렬
+  .close-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }

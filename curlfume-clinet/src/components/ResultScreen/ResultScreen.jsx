@@ -5,7 +5,6 @@ import "../../css/ResultScreen/ResultScreen.scss";
 import PopupData from "./PopupDataList.json";
 import ResultList from "./ResultList.json";
 import headerImg from "../../IMG/ResultScreen/header.jpg";
-// import footerImg from "../../IMG/ResultScreen/footer.png";
 
 const ResultScreen = () => {
   const { result } = useParams();
@@ -92,7 +91,7 @@ const ResultScreen = () => {
           className="popup-modal"
           overlayClassName="popup-overlay"
         >
-          <div className="popup-container">
+          <div className="popup-content-container">
             {selectedPopup && (
               <div className="popup-content">
                 <h1 className="popup-title">{selectedPopup.title}</h1>
