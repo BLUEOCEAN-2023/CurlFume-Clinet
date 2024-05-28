@@ -28,13 +28,13 @@ const ResultScreen = () => {
   const openModal = (popup) => {
     setSelectedPopup(popup);
     setModalIsOpen(true);
-    document.body.classList.add("body-no-scroll"); // 모달이 열릴 때 body 스크롤 방지
+    document.body.classList.add("body-no-scroll");
   };
 
   const closeModal = () => {
     setModalIsOpen(false);
     setSelectedPopup(null);
-    document.body.classList.remove("body-no-scroll"); // 모달이 닫힐 때 스크롤 방지 해제
+    document.body.classList.remove("body-no-scroll");
   };
 
   // useEffect 사용하여 컴포넌트 언마운트 시 스크롤 방지 해제
@@ -111,7 +111,7 @@ const ResultScreen = () => {
                         className="popup-item-image"
                         alt={`${item.content}`}
                       />
-                      <p>{item.content}</p>
+                      <p className="item-content">{item.content}</p>
                     </div>
                   ))}
                 </div>
