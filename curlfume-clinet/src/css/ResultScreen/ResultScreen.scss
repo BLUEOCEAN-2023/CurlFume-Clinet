@@ -42,11 +42,26 @@
     flex-direction: column;
     align-items: center;
 
+    .header-content {
+      display: flex; /* flex 레이아웃 사용 */
+      justify-content: space-between; /* 내부 요소들 사이에 동일한 간격을 둡니다 */
+      align-items: center; /* 요소들을 세로 방향으로 중앙 정렬합니다 */
+      width: 100%; /* 전체 너비를 사용 */
+    }
+
+    .keywords,
+    .main-picture {
+      flex-basis: 48%; /* 두 요소가 전체 컨테이너 너비의 대략 반씩 차지하도록 설정 */
+    }
+
     .keywords {
-      display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: space-around;
       width: 100%;
-      margin: 5em 0; // 헤더 이미지와의 간격 조정
+      padding-left: 2em;
+      font-size: 1.5em;
+      line-height: 3.5em;
     }
 
     .main-picture {
@@ -189,27 +204,3 @@
     cursor: pointer;
   }
 }
-
-// .footer {
-//   position: relative;
-
-//   .footer-img {
-//     width: 100%;
-//     display: block;
-//   }
-
-//   .home-button {
-//     position: absolute; // 절대 위치를 사용하여 배치
-//     top: 50%; // footer-img의 중간에 배치
-//     left: 50%; // footer-img의 중간에 배치
-//     // transform: translate(-50%, -50%); // 정확히 중앙에 배치하기 위해 변환
-//     background: none; // 배경 제거 (필요에 따라 조정)
-//     border: none; // 테두리 제거 (필요에 따라 조정)
-//     cursor: pointer; // 마우스 커서를 포인터로 변경
-//   }
-
-//   .home-icon {
-//     width: 5em; // 아이콘 크기 조정 (필요에 따라 조정)
-//     height: 5em; // 아이콘 크기 조정 (필요에 따라 조정)
-//   }
-// }

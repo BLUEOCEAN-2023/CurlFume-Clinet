@@ -54,18 +54,20 @@ const ResultScreen = () => {
         <img src={headerImg} alt="Header" className="header-img" />
       </header>
       <main>
-        <div className="keywords">
-          {keywords.map((keyword, index) => (
-            <h1 key={index} className="keyword">
-              {keyword.content}
-            </h1>
-          ))}
+        <div className="header-content">
+          <img
+            src={mainPicture}
+            alt={`${data.path} Picture`}
+            className="main-picture"
+          />
+          <div className="keywords">
+            {keywords.map((keyword, index) => (
+              <h1 key={index} className="keyword">
+                # {keyword.content}
+              </h1>
+            ))}
+          </div>
         </div>
-        <img
-          src={mainPicture}
-          alt={`${data.path} Picture`}
-          className="main-picture"
-        />
         <div className="perfumes">
           {perfumes.map((perfume, index) => (
             <div key={index} className="perfume">
