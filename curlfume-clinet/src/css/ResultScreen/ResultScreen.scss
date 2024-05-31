@@ -30,14 +30,14 @@
         width: 5em;
         height: 5em;
         padding: 1em;
-        background-color: white;
+        background-color: lavenderblush;
         border-radius: 2em;
       }
     }
   }
 
   main {
-    width: 70%; // 메인 컨텐츠 너비 조정
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,6 +55,7 @@
     }
 
     .keywords {
+      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
@@ -80,12 +81,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 35%; // 향수 항목의 너비 조정
-        margin: 3em; // 향수 항목 간의 간격 조정
+        width: 35%;
+        margin: 3em;
 
         img {
-          width: 80%; // 향수 이미지 크기 조정
-          margin-bottom: 3em; // 이미지와 제목 간의 간격 조정
+          width: 80%;
+          margin-bottom: 3em;
         }
 
         h1,
@@ -102,11 +103,6 @@
           width: 80%;
           font-size: 1.19em;
         }
-
-        // 너비가 768px 미만일 경우, 한 줄에 하나의 향수만 표시
-        @media (max-width: 768px) {
-          width: 90%;
-        }
       }
     }
   }
@@ -116,21 +112,21 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1.5em; /* 버튼 간의 간격 조정 */
+  gap: 1.5em;
   width: 100%;
   margin-top: 2em;
 
   .popup-button-image {
-    margin-bottom: 0.875em; // 이미지와 텍스트 사이의 간격
+    margin-bottom: 0.875em;
   }
 
   .popup-button {
     display: flex;
-    flex-direction: column; // 자식 요소를 수직으로 정렬
-    align-items: center; // 가운데 정렬
-    justify-content: center; // 내용을 중앙에 위치
-    text-align: center; // 텍스트 중앙 정렬
-    flex: 1 1 auto; /* 버튼의 크기를 자동으로 조정 */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1 1 auto;
     padding: 0.5em 1.5em;
     margin-bottom: 5em;
 
@@ -151,26 +147,27 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  right: auto;
-  bottom: auto;
-  margin-right: -50%;
   transform: translate(-50%, -50%);
-  background: white;
-  padding: 2.3em;
-  border-radius: 1em;
-  max-width: 500px; /* 모달의 최대 너비 설정 */
-  width: 90%; /* 화면 크기에 따라 조정 가능 */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .popup-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75); /* 배경을 어둡게 합니다. */
-  backdrop-filter: blur(5px); /* 배경 블러 처리 */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
 }
 
 .body-no-scroll {
@@ -178,9 +175,8 @@
 }
 
 .popup-content-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-height: 100%;
+  overflow-y: auto;
 
   .popup-content {
     text-align: center;
@@ -212,5 +208,93 @@
     border: none;
     border-radius: 0.5em;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 1200px) {
+  .result-screen {
+    main {
+      width: 90%;
+    }
+
+    .perfumes .perfume {
+      width: 45%;
+      margin: 2em;
+    }
+
+    footer .home-button {
+      top: 10%;
+      left: 85%;
+    }
+
+    .keywords,
+    .perfumes .perfume h1,
+    .perfumes .perfume p {
+      font-size: 1.2em;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .result-screen {
+    main {
+      width: 100%;
+    }
+
+    .header-content,
+    .main-picture,
+    .perfumes .perfume {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .keywords {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      padding-left: 0;
+      font-size: 1em;
+      line-height: 2em;
+    }
+
+    .perfumes .perfume {
+      img {
+        width: 90%;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+    }
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+
+  .result-screen footer .home-button {
+    top: 5%;
+    left: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .popup-modal {
+    padding: 1.5em;
+    width: 95%;
+  }
+
+  .popup-content-container {
+    .item-content,
+    .popup-button {
+      font-size: 0.9em;
+    }
   }
 }
