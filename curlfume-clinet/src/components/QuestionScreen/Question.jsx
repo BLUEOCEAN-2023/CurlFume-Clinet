@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import Questions from "./QuestionList.json";
 import { useNavigate } from "react-router-dom";
@@ -7,6 +8,7 @@ const Question = () => {
   const navigate = useNavigate();
   const [currentId, setCurrentId] = useState(1);
   const [perfume, setPerfume] = useState([]);
+  // eslint-disable-next-line no-unused-vars
   const [baseResult, setBaseResult] = useState("");
   const TOTAL_PAGES = 6;
 

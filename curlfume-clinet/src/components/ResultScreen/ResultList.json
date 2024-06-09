@@ -14,6 +14,7 @@
       }
     ],
     "picture": "/IMG/perfume/basil/basilPicture.jpg",
+    "subPicture": "/IMG/ratio/basil_chart.png",
     "perfume": [
       {
         "image": "/IMG/perfume/basil/basilImg_J.png",
@@ -42,6 +43,7 @@
       }
     ],
     "picture": "/IMG/perfume/frost/frostPicture.jpg",
+    "subPicture": "/IMG/ratio/frost_chart.png",
     "perfume": [
       {
         "image": "/IMG/perfume/frost/frostImg_J.png",
@@ -70,6 +72,7 @@
       }
     ],
     "picture": "/IMG/perfume/grapefruit/grapefruitPicture.jpg",
+    "subPicture": "/IMG/ratio/grapefruit_chart.png",
     "perfume": [
       {
         "image": "/IMG/perfume/grapefruit/grapefruitImg_J.png",
@@ -98,6 +101,7 @@
       }
     ],
     "picture": "/IMG/perfume/earlgrey/earlgreyPicture.jpg",
+    "subPicture": "/IMG/ratio/earlgrey_chart.png",
     "perfume": [
       {
         "image": "/IMG/perfume/earlgrey/earlgreyImg_J.png",
@@ -126,6 +130,7 @@
       }
     ],
     "picture": "/IMG/perfume/pear/pearPicture.jpg",
+    "subPicture": "/IMG/ratio/pear_chart.png",
     "perfume": [
       {
         "image": "/IMG/perfume/pear/pearImg_J.png",
@@ -154,6 +159,7 @@
       }
     ],
     "picture": "/IMG/perfume/gold/goldPicture.jpg",
+    "subPicture": "/IMG/ratio/gold_chart.png",
     "perfume": [
       {
         "image": "/IMG/perfume/gold/goldImg_J.png",
@@ -182,6 +188,7 @@
       }
     ],
     "picture": "/IMG/perfume/current/currentPicture.jpg",
+    "subPicture": "/IMG/ratio/current_chart.png",
     "perfume": [
       {
         "image": "/IMG/perfume/current/currentImg_J.png",
@@ -210,6 +217,7 @@
       }
     ],
     "picture": "/IMG/perfume/flores/floresPicture.jpg",
+    "subPicture": "/IMG/ratio/flores_chart.png",
     "perfume": [
       {
         "image": "/IMG/perfume/flores/floresImg_J.png",
@@ -238,6 +246,7 @@
       }
     ],
     "picture": "/IMG/perfume/daisy/daisyPicture.jpg",
+    "subPicture": "/IMG/ratio/daisy_chart.png",
     "perfume": [
       {
         "image": "/IMG/perfume/daisy/daisyImg_J.png",
@@ -266,6 +275,7 @@
       }
     ],
     "picture": "/IMG/perfume/bliss/blissPicture.jpg",
+    "subPicture": "/IMG/ratio/bliss_chart.png",
     "perfume": [
       {
         "image": "/IMG/perfume/bliss/blissImg_J.png",
@@ -294,6 +304,7 @@
       }
     ],
     "picture": "/IMG/perfume/sunday/sundayPicture.jpg",
+    "subPicture": "/IMG/ratio/sunday_chart.png",
     "perfume": [
       {
         "image": "/IMG/perfume/sunday/sundayImg_J.png",
@@ -322,6 +333,7 @@
       }
     ],
     "picture": "/IMG/perfume/pink/pinkPicture.jpg",
+    "subPicture": "/IMG/ratio/pink_chart.png",
     "perfume": [
       {
         "image": "/IMG/perfume/pink/pinkImg_J.png",
@@ -350,6 +362,7 @@
       }
     ],
     "picture": "/IMG/perfume/mystic/mysticPicture.jpg",
+    "subPicture": "/IMG/ratio/mystic_chart.png",
     "perfume": [
       {
         "image": "/IMG/perfume/mystic/mysticImg_J.png",
@@ -378,6 +391,7 @@
       }
     ],
     "picture": "/IMG/perfume/emeraid/emeraidPicture.jpg",
+    "subPicture": "/IMG/ratio/emeraid_chart.png",
     "perfume": [
       {
         "image": "/IMG/perfume/emeraid/emeraidImg_J.png",
@@ -406,6 +420,7 @@
       }
     ],
     "picture": "/IMG/perfume/festival/festivalPicture.jpg",
+    "subPicture": "/IMG/ratio/festival_chart.png",
     "perfume": [
       {
         "image": "/IMG/perfume/festival/festivalImg_J.png",
@@ -434,6 +449,7 @@
       }
     ],
     "picture": "/IMG/perfume/osmanthus/osmanthusPicture.jpg",
+    "subPicture": "/IMG/ratio/osmanthus_chart.png",
     "perfume": [
       {
         "image": "/IMG/perfume/osmanthus/osmanthusImg_J.png",
