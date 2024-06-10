@@ -55,7 +55,7 @@ const Question = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       {Questions.map(
         (item) =>
           item.id === currentId && (
