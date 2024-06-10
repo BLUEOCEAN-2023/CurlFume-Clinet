@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Modal from "react-modal";
@@ -25,6 +26,13 @@ const ResultScreen = () => {
   }));
   const keywords = data.keyword;
 
+  const subPicture = data.subPicture;
+  // eslint-disable-next-line no-unused-vars
+  const ratio = data.perfume.map((perfume) => ({
+    ...perfume,
+    image: perfume.image,
+  }));
+
   const openModal = (popup) => {
     setSelectedPopup(popup);
     setModalIsOpen(true);
@@ -38,6 +46,7 @@ const ResultScreen = () => {
   };
 
   // useEffect 사용하여 컴포넌트 언마운트 시 스크롤 방지 해제
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     return () => {
       document.body.classList.remove("body-no-scroll");
@@ -77,6 +86,12 @@ const ResultScreen = () => {
             </div>
           ))}
         </div>
+        <img
+            src={subPicture}
+            alt={`${data.path} subPicture`}
+            className="ratio"
+          />
+
         <div className="button-container">
           {PopupData.map((popup, index) => (
             <button
@@ -129,6 +144,8 @@ const ResultScreen = () => {
           <img src={homeIcon} alt="Home" className="home-icon" />
         </button>
       </footer>
+
+      
     </div>
   );
 };
