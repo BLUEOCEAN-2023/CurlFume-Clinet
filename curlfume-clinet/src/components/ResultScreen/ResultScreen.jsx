@@ -25,6 +25,7 @@ const ResultScreen = () => {
     image: perfume.image,
   }));
   const keywords = data.keyword;
+  const perfume = data.path;
 
   const subPicture = data.subPicture;
   // eslint-disable-next-line no-unused-vars
@@ -86,11 +87,60 @@ const ResultScreen = () => {
             </div>
           ))}
         </div>
-        <img
-            src={subPicture}
-            alt={`${data.path} subPicture`}
-            className="ratio"
-          />
+
+        {/* <img
+          src={subPicture}
+          alt={`${data.path} subPicture`}
+          className="ratio"
+        /> */}
+
+        <div className="chart-container">
+          <div className="blank-container">
+            <div className="chart">
+              <svg viewBox="0 0 200 200">
+                <circle
+                  cx="100"
+                  cy="100"
+                  r="90"
+                  fill="none"
+                  stroke="beige"
+                  strokeWidth="20"
+                  strokeLinecap="round"
+                />
+                <circle
+                  cx="100"
+                  cy="100"
+                  r="90"
+                  fill="none"
+                  stroke="green"
+                  strokeWidth="20"
+                  strokeLinecap="round"
+                  strokeDasharray={`${2 * Math.PI * 90 * 0.75} ${
+                    2 * Math.PI * 90 * 0.25
+                  }`}
+                  strokeDashoffset={2 * Math.PI * 90 * 0.25}
+                />
+                <text
+                  x="50%"
+                  y="50%"
+                  // transform="translate(-50%, -50%)"
+                  textAnchor="middle"
+                  dominantBaseline="middle"
+                  fontSize="24"
+                  fill="black"
+                >
+                  75%
+                </text>
+              </svg>
+            </div>
+
+            <div className="text-container">
+              <h1>{perfume}</h1>
+              <hr />
+              <h2>77명 중 13명</h2>
+            </div>
+          </div>
+        </div>
 
         <div className="button-container">
           {PopupData.map((popup, index) => (
@@ -144,8 +194,6 @@ const ResultScreen = () => {
           <img src={homeIcon} alt="Home" className="home-icon" />
         </button>
       </footer>
-
-      
     </div>
   );
 };

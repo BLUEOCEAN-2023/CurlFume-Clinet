@@ -93,6 +93,41 @@
       margin-bottom: 7em;
     }
 
+    .chart-container {
+      margin-bottom: 5em;
+      margin-left: 5em;
+      display: flex;
+      align-items: center;
+      border: 4px solid black;
+      border-radius: 1.7em;
+      margin-top: 3.5em;
+      margin-bottom: 7em;
+
+      .blank-container {
+        margin-top: 3em;
+        margin-bottom: 3em;
+        margin-left: 5em;
+        margin-right: 5em;
+        display: flex;
+        align-items: center;
+
+        .chart {
+          width: 17em;
+          height: 17em;
+          margin-right: 5em;
+        }
+
+        .text-container {
+          text-align: center;
+
+          hr {
+            width: 15em;
+            border: 2px solid black;
+          }
+        }
+      }
+    }
+
     .perfumes {
       display: flex;
       flex-wrap: wrap;
