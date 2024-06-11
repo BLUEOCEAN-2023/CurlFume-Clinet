@@ -1,18 +1,18 @@
-@mixin responsive($breakpoint) {
-  @if $breakpoint == "mobile" {
-    @media (max-width: 480px) {
-      @content;
-    }
-  } @else if $breakpoint == "tablet" {
-    @media (max-width: 768px) {
-      @content;
-    }
-  } @else if $breakpoint == "desktop" {
-    @media (max-width: 1200px) {
-      @content;
-    }
-  }
-}
+// @mixin responsive($breakpoint) {
+//   @if $breakpoint == "mobile" {
+//     @media (max-width: 480px) {
+//       @content;
+//     }
+//   } @else if $breakpoint == "tablet" {
+//     @media (max-width: 768px) {
+//       @content;
+//     }
+//   } @else if $breakpoint == "desktop" {
+//     @media (max-width: 1200px) {
+//       @content;
+//     }
+//   }
+// }
 
 .result-screen {
   display: flex;
@@ -233,91 +233,91 @@
   }
 }
 
-// 반응형 스타일 적용
-@include responsive("desktop") {
-  .result-screen {
-    main {
-      width: 90%;
-    }
+// // 반응형 스타일 적용
+// @include responsive("desktop") {
+//   .result-screen {
+//     main {
+//       width: 90%;
+//     }
 
-    .perfumes .perfume {
-      width: 45%;
-      margin: 2em;
-    }
+//     .perfumes .perfume {
+//       width: 45%;
+//       margin: 2em;
+//     }
 
-    footer .home-button {
-      top: 10%;
-      left: 85%;
-    }
+//     footer .home-button {
+//       top: 10%;
+//       left: 85%;
+//     }
 
-    .keywords,
-    .perfumes .perfume h1,
-    .perfumes .perfume p {
-      font-size: 1.2em;
-    }
-  }
-}
+//     .keywords,
+//     .perfumes .perfume h1,
+//     .perfumes .perfume p {
+//       font-size: 1.2em;
+//     }
+//   }
+// }
 
-@include responsive("tablet") {
-  .result-screen {
-    main {
-      width: 100%;
-    }
+// @include responsive("tablet") {
+//   .result-screen {
+//     main {
+//       width: 100%;
+//     }
 
-    .header-content,
-    .main-picture,
-    .perfumes .perfume {
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    }
+//     .header-content,
+//     .main-picture,
+//     .perfumes .perfume {
+//       flex-direction: column;
+//       align-items: center;
+//       width: 100%;
+//     }
 
-    .keywords {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 100%;
-      padding-left: 0;
-      font-size: 1em;
-      line-height: 2em;
-    }
+//     .keywords {
+//       display: flex;
+//       flex-direction: row;
+//       flex-wrap: wrap;
+//       justify-content: center;
+//       width: 100%;
+//       padding-left: 0;
+//       font-size: 1em;
+//       line-height: 2em;
+//     }
 
-    .perfumes .perfume {
-      img {
-        width: 90%;
-      }
+//     .perfumes .perfume {
+//       img {
+//         width: 90%;
+//       }
 
-      h1 {
-        font-size: 1.8em;
-      }
+//       h1 {
+//         font-size: 1.8em;
+//       }
 
-      p {
-        font-size: 1em;
-      }
-    }
-  }
+//       p {
+//         font-size: 1em;
+//       }
+//     }
+//   }
 
-  .button-container {
-    flex-direction: column;
-  }
+//   .button-container {
+//     flex-direction: column;
+//   }
 
-  .result-screen footer .home-button {
-    top: 5%;
-    left: 80%;
-  }
-}
+//   .result-screen footer .home-button {
+//     top: 5%;
+//     left: 80%;
+//   }
+// }
 
-@include responsive("mobile") {
-  .popup-modal {
-    padding: 1.5em;
-    width: 95%;
-  }
+// @include responsive("mobile") {
+//   .popup-modal {
+//     padding: 1.5em;
+//     width: 95%;
+//   }
 
-  .popup-content-container {
-    .item-content,
-    .popup-button {
-      font-size: 0.9em;
-    }
-  }
-}
+//   .popup-content-container {
+//     .item-content,
+//     .popup-button {
+//       font-size: 0.9em;
+//     }
+//   }
+// }
