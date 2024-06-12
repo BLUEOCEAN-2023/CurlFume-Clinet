@@ -46,6 +46,16 @@ const ResultScreen = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // 컴포넌트가 마운트될 때 클래스 추가
+    document.body.classList.add("result-body-page");
+
+    // 컴포넌트가 언마운트될 때 클래스 제거
+    return () => {
+      document.body.classList.remove("result-body-page");
+    };
+  }, []);
+
   // 홈버튼
   const goToHome = () => {
     movePage("/");
@@ -53,7 +63,7 @@ const ResultScreen = () => {
 
   // 결과 그래프 관련
   const perfume = data.path;
-  const percent = 10;
+  const percent = 77;
   const totalN = 77; // 테스트 진행 전체 인원
   const includeN = 7; // 테스트 결과 해당 인원 수
 
@@ -186,7 +196,7 @@ const ResultScreen = () => {
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
           className="popup-modal"
-          overlayClassName="popup-overlay"
+          // overlayClassName="popup-overlay"
         >
           <div className="popup-content-container">
             {selectedPopup && (
