@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Modal from "react-modal";
@@ -25,15 +24,9 @@ const ResultScreen = () => {
     image: perfume.image,
   }));
   const keywords = data.keyword;
-  const perfume = data.path;
+  const chartColors = data.chartColor;
 
-  const subPicture = data.subPicture;
-  // eslint-disable-next-line no-unused-vars
-  const ratio = data.perfume.map((perfume) => ({
-    ...perfume,
-    image: perfume.image,
-  }));
-
+  // 모달창
   const openModal = (popup) => {
     setSelectedPopup(popup);
     setModalIsOpen(true);
@@ -47,23 +40,31 @@ const ResultScreen = () => {
   };
 
   // useEffect 사용하여 컴포넌트 언마운트 시 스크롤 방지 해제
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     return () => {
       document.body.classList.remove("body-no-scroll");
     };
   }, []);
 
+  // 홈버튼
   const goToHome = () => {
     movePage("/");
   };
+
+  // 결과 그래프 관련
+  const perfume = data.path;
+  const percent = 77;
+  const totalN = 77; // 테스트 진행 전체 인원
+  const includeN = 7; // 테스트 결과 해당 인원 수
 
   return (
     <div className="result-screen">
       <header>
         <img src={headerImg} alt="Header" className="header-img" />
       </header>
+
       <main>
+        {/* 해당결과 그림 */}
         <div className="header-content">
           <img
             src={mainPicture}
@@ -78,6 +79,8 @@ const ResultScreen = () => {
             ))}
           </div>
         </div>
+
+        {/* 추천향수정보 */}
         <div className="perfumes">
           {perfumes.map((perfume, index) => (
             <div key={index} className="perfume">
@@ -88,12 +91,7 @@ const ResultScreen = () => {
           ))}
         </div>
 
-        {/* <img
-          src={subPicture}
-          alt={`${data.path} subPicture`}
-          className="ratio"
-        /> */}
-
+        {/* 그래프 */}
         <div className="chart-container">
           <div className="blank-container">
             <div className="chart">
@@ -103,7 +101,7 @@ const ResultScreen = () => {
                   cy="100"
                   r="90"
                   fill="none"
-                  stroke="beige"
+                  stroke="#E2E2E2"
                   strokeWidth="20"
                   strokeLinecap="round"
                 />
@@ -112,7 +110,7 @@ const ResultScreen = () => {
                   cy="100"
                   r="90"
                   fill="none"
-                  stroke="green"
+                  stroke="url(#gradient)"
                   strokeWidth="20"
                   strokeLinecap="round"
                   strokeDasharray={`${2 * Math.PI * 90 * 0.75} ${
@@ -120,16 +118,32 @@ const ResultScreen = () => {
                   }`}
                   strokeDashoffset={2 * Math.PI * 90 * 0.25}
                 />
+                <defs>
+                  <linearGradient
+                    id="gradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    {chartColors.map((color, index) => (
+                      <stop
+                        key={index}
+                        offset={color.offset}
+                        stopColor={color.color}
+                      />
+                    ))}
+                  </linearGradient>
+                </defs>
                 <text
                   x="50%"
                   y="50%"
-                  // transform="translate(-50%, -50%)"
                   textAnchor="middle"
                   dominantBaseline="middle"
                   fontSize="24"
                   fill="black"
                 >
-                  75%
+                  {percent}%
                 </text>
               </svg>
             </div>
@@ -137,11 +151,14 @@ const ResultScreen = () => {
             <div className="text-container">
               <h1>{perfume}</h1>
               <hr />
-              <h2>77명 중 13명</h2>
+              <h2>
+                {totalN}명 중 {includeN}명
+              </h2>
             </div>
           </div>
         </div>
 
+        {/* 모달창 버튼*/}
         <div className="button-container">
           {PopupData.map((popup, index) => (
             <button
@@ -154,10 +171,12 @@ const ResultScreen = () => {
                 alt={`${popup.title} Button`}
                 className="popup-button-image"
               />
-              <span className="popup-button-text">{popup.title}</span>{" "}
+              <span className="popup-button-text">{popup.title}</span>
             </button>
           ))}
         </div>
+
+        {/* 모달창 구현 */}
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
@@ -188,6 +207,7 @@ const ResultScreen = () => {
           </div>
         </Modal>
       </main>
+
       <footer>
         <img src={headerImg} alt="Footer" className="footer-img" />
         <button onClick={goToHome} className="home-button">
