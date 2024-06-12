@@ -53,9 +53,16 @@ const ResultScreen = () => {
 
   // 결과 그래프 관련
   const perfume = data.path;
-  const percent = 77;
+  const percent = 10;
   const totalN = 77; // 테스트 진행 전체 인원
   const includeN = 7; // 테스트 결과 해당 인원 수
+
+  // 그래프의 원의 둘레 구하기 (2 * Math.PI * 반지름)
+  const circumference = 2 * Math.PI * 90;
+  // 그래프의 채워진 부분 계산 (percent에 비례)
+  const filled = (percent / 100) * circumference;
+  // 그래프의 빈 부분 계산
+  const unfilled = circumference - filled;
 
   return (
     <div className="result-screen">
@@ -113,10 +120,8 @@ const ResultScreen = () => {
                   stroke="url(#gradient)"
                   strokeWidth="20"
                   strokeLinecap="round"
-                  strokeDasharray={`${2 * Math.PI * 90 * 0.75} ${
-                    2 * Math.PI * 90 * 0.25
-                  }`}
-                  strokeDashoffset={2 * Math.PI * 90 * 0.25}
+                  strokeDasharray={`${filled} ${unfilled}`}
+                  strokeDashoffset={circumference / 4}
                 />
                 <defs>
                   <linearGradient
