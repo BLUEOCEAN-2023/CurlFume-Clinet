@@ -248,7 +248,8 @@
       margin: 3em 0;
 
       .popup-item-image {
-        max-width: 7.7em;
+        // max-width: 7.7em;
+        width: 9em;
         height: auto;
       }
 
@@ -261,7 +262,9 @@
   }
 
   .close-button {
+    // width: 15em;
     margin-top: 0.5em;
+    font-size: 1.2em;
     padding: 1em 3em;
     background-color: #333;
     color: white;
