@@ -201,7 +201,7 @@ const ResultScreen = () => {
           <div className="popup-content-container">
             {selectedPopup && (
               <div className="popup-content">
-                <h1 className="popup-title">{selectedPopup.title}</h1>
+                <p className="popup-title">{selectedPopup.title}</p>
                 <div className="popup-grid">
                   {selectedPopup.data.map((item, idx) => (
                     <div key={idx} className="popup-item">
@@ -210,6 +210,7 @@ const ResultScreen = () => {
                         className="popup-item-image"
                         alt={`${item.content}`}
                       />
+                      <p className="item-title-content">{item.title}</p>
                       <p className="item-content">{item.content}</p>
                     </div>
                   ))}
