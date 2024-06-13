@@ -1,5 +1,3 @@
-// 시작 컴포넌트
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../../css/StartScreen/StartScreen.scss";
@@ -13,14 +11,10 @@ const StartScreen = () => {
   };
 
   return (
-    <>
-      <div className="bgImg">
-        <img src={StartScreenImg} />
-        <div className="bgImgBtn">
-          <button onClick={toNextScreen}>시작하기</button>
-        </div>
-      </div>
-    </>
+    <div className="bgImg">
+      <img src={StartScreenImg} alt="Start Screen" />
+      <button onClick={toNextScreen}>시작하기</button>
+    </div>
   );
 };
 
