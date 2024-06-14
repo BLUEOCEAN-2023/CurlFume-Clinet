@@ -7,6 +7,7 @@
 }
 
 * {
+  box-sizing: border-box;
   font-family: WavvePADO;
   -ms-overflow-style: none;
 }
@@ -15,36 +16,38 @@
   display: none;
 }
 
+.start-page {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 .bgImg {
   background-color: #fff;
   width: 100vw;
   height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   flex-direction: column;
 
-  img {
-    width: 27em;
-    max-width: 27em;
+  .bg-img {
+    width: 27vw;
     height: auto;
-    margin-bottom: 4em;
+    margin-bottom: 8vh;
   }
 
-  button {
+  .start-btn {
     border: none;
     cursor: pointer;
     background-color: #fff;
     color: #000;
-    height: 5vw;
-    max-height: 5em;
-    font-size: 2vw;
+    font-size: 2.7vw;
     text-align: center;
   }
 
-  button:hover {
+  .start-btn:hover {
     color: #979797;
   }
 }

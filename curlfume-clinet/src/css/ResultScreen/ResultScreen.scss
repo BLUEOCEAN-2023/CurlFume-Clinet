@@ -1,3 +1,7 @@
+.body-no-scroll {
+  overflow: hidden;
+}
+
 .result-body-page {
   margin: 0;
   padding: 0;
@@ -16,7 +20,7 @@
     .footer-img {
       display: block;
       width: 100%;
-      height: 8em;
+      height: 13vh;
     }
   }
 
@@ -25,18 +29,18 @@
 
     .home-button {
       position: absolute;
-      top: 16%;
+      top: 6%;
       left: 91%;
       background: none;
       border: none;
       cursor: pointer;
 
       .home-icon {
-        width: 5em;
-        height: 5em;
-        padding: 1em;
+        width: 5vw;
+        height: 5vw;
+        padding: 1vw;
         background-color: white;
-        border-radius: 2em;
+        border-radius: 1.5vw;
       }
     }
   }
@@ -47,6 +51,7 @@
     flex-direction: column;
     align-items: center;
 
+    // 해당결과 그림
     .header-content {
       display: flex;
       justify-content: space-between;
@@ -65,58 +70,18 @@
       align-items: center;
       justify-content: space-around;
       width: 100%;
-      padding-left: 2em;
-      font-size: 1.5em;
-      line-height: 3.5em;
+      padding-left: 2vw;
+      font-size: 1.5vw;
+      line-height: 5.7vh;
     }
 
     .main-picture {
       width: 60%;
-      margin-top: 3.5em;
-      margin-bottom: 7em;
+      margin-top: 7vh;
+      margin-bottom: 10vh;
     }
 
-    .ratio {
-      width: 60%;
-      margin-top: 3.5em;
-      margin-bottom: 7em;
-    }
-
-    .chart-container {
-      margin-bottom: 5em;
-      margin-left: 5em;
-      display: flex;
-      align-items: center;
-      border: 4px solid black;
-      border-radius: 1.7em;
-      margin-top: 3.5em;
-      margin-bottom: 7em;
-
-      .blank-container {
-        margin-top: 3em;
-        margin-bottom: 3em;
-        margin-left: 5em;
-        margin-right: 5em;
-        display: flex;
-        align-items: center;
-
-        .chart {
-          width: 17em;
-          height: 17em;
-          margin-right: 5em;
-        }
-
-        .text-container {
-          text-align: center;
-
-          hr {
-            width: 15em;
-            border: 2px solid black;
-          }
-        }
-      }
-    }
-
+    // 추천향수정보
     .perfumes {
       display: flex;
       flex-wrap: wrap;
@@ -128,158 +93,182 @@
         flex-direction: column;
         align-items: center;
         width: 35%;
-        margin: 3em;
+        margin: 5vw;
 
-        img {
+        .perfume-img {
           width: 80%;
-          margin-bottom: 3em;
+          margin-bottom: 2.7vw;
         }
 
-        h1,
-        p {
+        .perfume-title,
+        .perfume-detail {
           word-break: keep-all;
           text-align: center;
+          margin-bottom: 1vw;
         }
 
-        h1 {
-          font-size: 2.5em;
+        .perfume-title {
+          font-size: 2vw;
+          font-weight: bold;
         }
 
-        p {
+        .perfume-detail {
           width: 80%;
-          font-size: 1.19em;
+          font-size: 1.2vw;
+          margin-bottom: 4vw;
         }
       }
     }
-  }
-}
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5em;
-  width: 100%;
-  margin-top: 2em;
+    // 그래프
+    .chart-container {
+      // margin-bottom: 10vw;
+      // margin-left: 5vw;
+      display: flex;
+      align-items: center;
+      border: 0.37vw solid black;
+      border-radius: 1.7vw;
+      // margin-top: 3.5vh;
+      margin-bottom: 7vh;
 
-  .popup-button-image {
-    margin-bottom: 0.875em;
-  }
+      .blank-container {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        display: flex;
+        align-items: center;
 
-  .popup-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex: 1 1 auto;
-    padding: 0.5em 1.5em;
-    margin-bottom: 5em;
+        .chart {
+          width: 17vw;
+          height: 17vw;
+          margin-right: 5vw;
+        }
 
-    font-size: 1.2em;
-    color: black;
-    border: none;
-    border-radius: 0.5em;
-    background-color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
+        .text-container {
+          text-align: center;
 
-    &:hover {
-      background-color: #b5b4b4;
+          .chart-text-perfume,
+          .chart-text-percent {
+            font-weight: bold;
+          }
+
+          .chart-text-perfume {
+            font-size: 2vw;
+          }
+
+          .chart-text-percent {
+            font-size: 1.6vw;
+          }
+
+          hr {
+            width: 15vw;
+            border-radius: 1vw;
+            border: 0.175vw solid black;
+          }
+        }
+      }
     }
-  }
-}
 
+    // 모달창 버튼
+    .button-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.7vw;
+      width: 100%;
+      margin-top: 3vh;
+
+      .popup-button-image {
+        width: 12vw;
+        margin-bottom: 0.875vw;
+      }
+
+      .popup-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex: 1 1 auto;
+        padding: 3vw 2vw;
+        margin-bottom: 6vh;
+
+        font-size: 1.3vw;
+        color: black;
+        border: none;
+        border-radius: 0.7vw;
+        background-color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #b5b4b4;
+        }
+      }
+    }
+  } // main
+} // result-screen
+
+// 모달창
 .popup-modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
-  max-height: 80%;
+  width: 80vw;
+  max-height: 85vh;
   overflow: auto;
-  padding: 20px;
+  padding: 1vw;
   background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-radius: 0.8vw;
+  box-shadow: 0 0 2vw rgba(0, 0, 0, 0.3);
 
-  // ::-webkit-scrollbar {
-  //   width: 10px;
-  // }
+  .popup-content-container {
+    // max-height: 100%;
 
-  // ::-webkit-scrollbar-track {
-  //   background-color: darkgrey;
-  // }
+    .popup-content {
+      text-align: center;
 
-  // ::-webkit-scrollbar-thumb {
-  //   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  // }
-}
-
-// .popup-overlay {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(0, 0, 0, 0.5);
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   z-index: 100;
-//   overflow: hidden;
-// }
-
-.body-no-scroll {
-  overflow: hidden;
-}
-
-.popup-content-container {
-  max-height: 100%;
-  // overflow-y: auto;
-
-  .popup-content {
-    text-align: center;
-
-    .popup-title {
-      font-size: 3em;
-      margin-bottom: 1.3em;
-    }
-
-    .popup-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 2.5em 0;
-
-      .popup-item-image {
-        width: 9em;
-        height: auto;
+      .popup-title {
+        font-size: 2.5vw;
+        margin-bottom: 7vh;
       }
 
-      .item-title-content {
-        font-size: 2em;
-        margin-bottom: 0.2em;
-      }
+      .popup-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2.5vh 0;
 
-      .item-content {
-        width: 40%;
-        font-size: 1.2em;
-        // word-wrap: break-word;
-        word-break: keep-all;
-        margin-bottom: 2.5em;
+        .popup-item-image {
+          width: 9vw;
+          margin-bottom: 0.7vw;
+        }
+
+        .item-title-content {
+          font-size: 1.7vw;
+          margin-bottom: 0.5vh;
+        }
+
+        .item-content {
+          width: 40%;
+          font-size: 1.2vw;
+          word-break: keep-all;
+          margin-bottom: 5vh;
+        }
       }
     }
-  }
 
-  .close-button {
-    margin-top: 0.5em;
-    font-size: 1.2em;
-    padding: 1em 3em;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 0.5em;
-    cursor: pointer;
+    .close-button {
+      margin-top: 0.5vh;
+      font-size: 1.3vw;
+      padding: 0.875vw 3.7vw;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 0.5vw;
+      cursor: pointer;
+    }
   }
 }
