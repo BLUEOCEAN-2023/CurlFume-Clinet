@@ -64,8 +64,8 @@ const ResultScreen = () => {
   // 결과 그래프 관련
   const perfume = data.path;
   const percent = 77;
-  const totalN = 77; // 테스트 진행 전체 인원
-  const includeN = 7; // 테스트 결과 해당 인원 수
+  const totalN = 65; // 테스트 진행 전체 인원
+  const includeN = 50; // 테스트 결과 해당 인원 수
 
   // 그래프의 원의 둘레 구하기 (2 * Math.PI * 반지름)
   const circumference = 2 * Math.PI * 90;
@@ -101,9 +101,13 @@ const ResultScreen = () => {
         <div className="perfumes">
           {perfumes.map((perfume, index) => (
             <div key={index} className="perfume">
-              <img src={perfume.image} alt={`${perfume.title} Image`} />
-              <h1>{perfume.title}</h1>
-              <p>{perfume.detail}</p>
+              <img
+                className="perfume-img"
+                src={perfume.image}
+                alt={`${perfume.title} Image`}
+              />
+              <p className="perfume-title">{perfume.title}</p>
+              <p className="perfume-detail">{perfume.detail}</p>
             </div>
           ))}
         </div>
@@ -164,11 +168,11 @@ const ResultScreen = () => {
             </div>
 
             <div className="text-container">
-              <h1>{perfume}</h1>
+              <p className="chart-text-perfume">{perfume}</p>
               <hr />
-              <h2>
+              <p className="chart-text-percent">
                 {totalN}명 중 {includeN}명
-              </h2>
+              </p>
             </div>
           </div>
         </div>
