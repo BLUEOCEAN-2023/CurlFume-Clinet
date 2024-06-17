@@ -12,6 +12,9 @@ const ResultScreen = () => {
   const data = ResultList.find((item) => item.path === result);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedPopup, setSelectedPopup] = useState(null);
+  const [totalN, setTotalN] = useState(0);
+  const [includeN, setIncludeN] = useState(0);
+  const [percent, setPercent] = useState(0);
   const movePage = useNavigate();
 
   if (!data) {
@@ -63,9 +66,27 @@ const ResultScreen = () => {
 
   // 결과 그래프 관련
   const perfume = data.path;
-  const percent = 77;
-  const totalN = 65; // 테스트 진행 전체 인원
-  const includeN = 50; // 테스트 결과 해당 인원 수
+
+  // perfume 값을 서버에 저장하고 totalN, includeN, percent 값 가져오기
+  useEffect(() => {
+    fetch('/api/fetch_TypeData.php', {  // 프록시 설정에 맞게 경로 변경
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ perfume }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+        setTotalN(data.totalN);
+        setIncludeN(data.includeN);
+        setPercent(data.percent);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }, [perfume]);
 
   // 그래프의 원의 둘레 구하기 (2 * Math.PI * 반지름)
   const circumference = 2 * Math.PI * 90;
