@@ -4,6 +4,7 @@ import Modal from "react-modal";
 import "../../css/ResultScreen/ResultScreen.scss";
 import PopupData from "./PopupDataList.json";
 import ResultList from "./ResultList.json";
+import Loading from "./Loading";
 import headerImg from "../../IMG/ResultScreen/header.jpg";
 import homeIcon from "../../IMG/ResultScreen/homeIcon.png";
 
@@ -15,6 +16,7 @@ const ResultScreen = () => {
   const [totalN, setTotalN] = useState(0);
   const [includeN, setIncludeN] = useState(0);
   const [percent, setPercent] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
   const movePage = useNavigate();
 
   if (!data) {
@@ -69,22 +71,26 @@ const ResultScreen = () => {
 
   // perfume 값을 서버에 저장하고 totalN, includeN, percent 값 가져오기
   useEffect(() => {
-    fetch('/api/fetch_TypeData.php', {  // 프록시 설정에 맞게 경로 변경
-      method: 'POST',
+    fetch("/api/fetch_TypeData.php", {
+      // 프록시 설정에 맞게 경로 변경
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({ perfume }),
     })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Success:', data);
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
         setTotalN(data.totalN);
         setIncludeN(data.includeN);
         setPercent(data.percent);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 3000);
       })
       .catch((error) => {
-        console.error('Error:', error);
+        console.error("Error:", error);
       });
   }, [perfume]);
 
@@ -94,6 +100,16 @@ const ResultScreen = () => {
   const filled = (percent / 100) * circumference;
   // 그래프의 빈 부분 계산
   const unfilled = circumference - filled;
+
+  // 로딩 중 화면을 보여주기 위한 조건부 렌더링
+  if (isLoading) {
+    return (
+      <div className="loading-screen">
+        <Loading />
+        <p className="loading-text">결과를 가져오는 중입니다...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="result-screen">
