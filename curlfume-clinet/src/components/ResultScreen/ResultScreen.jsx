@@ -101,6 +101,45 @@ const ResultScreen = () => {
   // 그래프의 빈 부분 계산
   const unfilled = circumference - filled;
 
+  // useEffect 사용하여 스크롤바 색상 설정
+  useEffect(() => {
+    const scrollbarStyle = document.createElement("style");
+    scrollbarStyle.innerHTML = `
+      .result-body-page::-webkit-scrollbar {
+        width: 0.9vw;
+      }
+      
+      .result-body-page::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, ${chartColors
+          .map((color) => `${color.color} ${color.offset}`)
+          .join(", ")});
+        border-radius: 0.7vw;
+      }
+
+      .result-body-page::-webkit-scrollbar-track {
+        background: #ffffff;
+      }
+
+      .modal-scroll-custom::-webkit-scrollbar {
+        width: 0.5vw;
+      }
+
+      .modal-scroll-custom::-webkit-scrollbar-thumb {
+        background: black;
+        border-radius: 0.5vw;
+      }
+
+      .modal-scroll-custom::-webkit-scrollbar-track {
+        background: #d9d9d9;
+      }
+    `;
+    document.head.appendChild(scrollbarStyle);
+
+    return () => {
+      document.head.removeChild(scrollbarStyle);
+    };
+  }, [chartColors]);
+
   // 로딩 중 화면을 보여주기 위한 조건부 렌더링
   if (isLoading) {
     return (
@@ -236,7 +275,7 @@ const ResultScreen = () => {
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
-          className="popup-modal"
+          className="popup-modal modal-scroll-custom"
           // overlayClassName="popup-overlay"
         >
           <div className="popup-content-container">
